@@ -1,0 +1,48 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* keeps logo on left, links spread */
+  align-items: center;
+  background-color: #0077cc;
+  padding: 10px 20px;
+  color: white;
+}
+
+.left-section {
+  display: flex;
+  align-items: center; /* vertically centers them */
+  gap: 10px; /* space between logo and title */
+}
+
+/* Logo container */
+.logo-container {
+  display: flex;
+  height: 125px;
+  width: auto
+}
+
+/*Title*/
+.Key-Club {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex: 0.5; /* takes up remaining space */
+  justify-content: space-around; /* spreads links evenly across */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links li a:hover {
+  color: #ffdd57;
+}
