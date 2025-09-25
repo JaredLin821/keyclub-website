@@ -1,6 +1,6 @@
 import React from 'react';
 import './navBar.css';
-import KeyclubLogo from "../Assets.png/KeyclubLogo.png";
+import KeyclubLogo from "../Assets/KeyclubLogo.png";
 
 const NavBar = () => {
   return (

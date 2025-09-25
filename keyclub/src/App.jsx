@@ -1,10 +1,14 @@
 import { useState } from 'react'
-import NavBar from './UI/navBar.jsx'
+import FullUI from './UI/fullUI'
+
 
 function App() {
 
   return (
-    NavBar()
+    <>
+      <FullUI />
+      
+    </>
   )
 }
 
