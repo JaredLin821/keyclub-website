@@ -1,10 +1,9 @@
 import { useState } from "react";
+import Gallery from "./imageLibrary";
+import "./ImageCarousel.css"
 
-    const images = [
-        "https://via.placeholder.com/600x400?text=Image+1",
-        "https://via.placeholder.com/600x400?text=Image+2",
-        "https://via.placeholder.com/600x400?text=Image+3"
-    ];
+
+    const images = Gallery();
 
 
 function Carousel(){
