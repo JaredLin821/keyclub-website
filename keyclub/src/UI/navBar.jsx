@@ -9,7 +9,7 @@ const NavBar = () => {
         <div className="logo-container">
             <img src={KeyclubLogo} alt="Logo"/>
         </div>
-        <h1 className="Key-Club">Key Club</h1>
+        <h1 className="Key-Club">FHS Key Club</h1>
     </div>
         <ul className="nav-links">
             <li>Home</li>

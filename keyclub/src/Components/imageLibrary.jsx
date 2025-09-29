@@ -1,17 +1,8 @@
 import React from 'react';
 
-function importAll(r) {
-  return r.keys().map(r);
-}
-
-const images = importAll(require.context('./kcimages', false, /\.(png|jpe?g|svg)$/));
+const images = import.meta.glob('../kcimages/*.{jpg,png,jpeg,svg,JPG,JPEG}', { eager: true });
 
 export default function Gallery() {
-  return (
-    <div>
-      {images.map((img, i) => (
-        <img key={i} src={img} alt={`pic-${i}`} />
-      ))}
-    </div>
-  );
+  // Return an array of image paths instead of a React component
+  return Object.values(images).map(img => img.default);
 }

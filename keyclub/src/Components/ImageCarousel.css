@@ -1,16 +1,28 @@
 .carousel {
   position: relative;
   width: 100%;
-  max-width: 800px;   /* adjust as needed */
-  height: 200px;      /* thin horizontal bar */
+  height: 250px;       /* increased height for better visibility */
   margin: auto;
   overflow: hidden;
 }
 
-.image-container img {
+.image-container {
+  display: flex;       /* display images in a row */
   width: 100%;
   height: 100%;
-  object-fit: cover;
+}
+
+.carousel-image {
+  flex: 0 0 25%;       /* each image takes 25% of the container (4 images) */
+  height: 100%;
+  padding: 0 5px;      /* add some spacing between images */
+}
+
+.carousel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* maintain aspect ratio without cropping */
+  border-radius: 4px;  /* slightly rounded corners */
 }
 
 /* Arrow divs */
@@ -20,6 +32,8 @@
   top: 50%;                 /* vertical center of the carousel */
   transform: translateY(-50%);  /* perfectly centered */
   z-index: 2;
+  background-color: rgba(0,0,0,0.3); /* semi-transparent background */
+  border-radius: 50%;       /* circular background */
 }
 
 .left-arrow {
@@ -31,7 +45,20 @@
 }
 
 /* Arrow buttons */
-.left-arrow button,
+.left-arrow button:hover,
 .right-arrow button:hover {
   background-color: rgba(0,0,0,0.8);
+}
+
+/* Default button styles */
+.left-arrow button,
+.right-arrow button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
 }

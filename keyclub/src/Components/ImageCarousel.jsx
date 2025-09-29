@@ -3,16 +3,23 @@ import Gallery from "./imageLibrary";
 import "./ImageCarousel.css"
 
 
-    const images = Gallery();
+const images = Gallery();
 
 
 function Carousel(){
-    const [currentIndex, setIndex] = useState(0)
+    const [currentIndex, setIndex] = useState(0);
+    const imagesPerPage = 4; // Number of images to display at once
+    
     function goToPrevious(){
-        setIndex((prev) => prev === 0 ? images.length - 1 : prev - 1);
+        setIndex((prev) => 
+            prev === 0 ? Math.max(0, images.length - 1) : Math.max(0, prev - 1)
+        );
     }
+    
     function goToNext(){
-        setIndex((prev) => prev === images.length - 1 ? 0 : prev + 1);
+        setIndex((prev) => 
+            prev + 1 >= images.length ? 0 : prev + 1
+        );
     }
 
 
@@ -24,7 +31,18 @@ function Carousel(){
             </div>
         {/* Image carousel, holds images */}
             <div className="image-container">
-                <img src={images[currentIndex]} alt="carousel image"/>
+                {[...Array(imagesPerPage)].map((_, i) => {
+                    const imageIndex = currentIndex + i;
+                    // Only render if we have an image at this index
+                    return imageIndex < images.length ? (
+                        <div className="carousel-image" key={imageIndex}>
+                            <img 
+                                src={images[imageIndex]} 
+                                alt={`carousel image ${imageIndex + 1}`}
+                            />
+                        </div>
+                    ) : null;
+                })}
             </div>
 
         {/* Right arrow in the carousel */}

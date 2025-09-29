@@ -1,0 +1,62 @@
+.homeTitle {
+  background-color: lightblue;
+  font-family: 'Baloo 2', cursive;
+  display: flex;               /* row layout: image + text */
+  flex-direction: row;         
+  justify-content: center;     
+  align-items: center;         
+  gap: 20px;                   
+  height: 200px;
+}
+
+.title {
+  font-size: 2.5rem;  
+  font-weight: bold;  
+  margin: 0;      
+  text-decoration: underline;    
+  color: white
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;      /* stack heading + subheading vertically */
+  justify-content: center;     
+  align-items: flex-start;     /* optional: align text to left */
+}
+
+.subheadingTitle { 
+  font-size: 1.2rem;  
+  color: rgb(255, 255, 255);        
+  margin-top: 5px;    /* space between heading and subheading */
+}
+
+.eagleLogo {
+  max-width: 150px;   
+  height: auto;
+  border-radius: 10px;
+}
+
+.aboutSection {
+  text-align: center;           /* center text */
+  padding: 40px 20px;          /* space around content */
+  background-color: lightblue;   /* light background */
+  font-family: 'Baloo 2', cursive;
+}
+
+.aboutButton {
+  margin-top: 30px;              /* space below subheading */
+  padding: 10px 20px;            /* button size */
+  font-size: 1rem;               
+  font-family: 'Baloo 2', cursive; /* match your heading font */
+  color: white;                  
+  background-color: lightskyblue;     /* nice blue button */
+  border: none;                  
+  border-radius: 8px;            /* rounded corners */
+  cursor: pointer;               
+  transition: background-color 0.3s ease; /* smooth hover */
+  align-self: center;          /* center button under text */
+}
+
+.aboutButton:hover {
+  background-color: cornflowerblue;     /* darker blue on hover */
+}
