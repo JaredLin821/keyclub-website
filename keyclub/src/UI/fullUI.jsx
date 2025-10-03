@@ -7,7 +7,8 @@ const FullUI = () => {
   return (
     <div>
       <NavBar />
-        <ImageCarousel />
+      <ImageCarousel />
+      
       <HomePage />
     </div>
   );
